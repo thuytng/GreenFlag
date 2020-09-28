@@ -2,11 +2,15 @@ package com.example.dom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import java.util.Calendar;
 
@@ -15,6 +19,9 @@ public class RegisterProfileActivity extends AppCompatActivity {
 
     DatePickerDialog picker;
     EditText etChooseBirthdate;
+    EditText etPostalAddress;
+    String[] countries = {"Barbados", "Canada", "Greenland", "Guatemala", "Haiti", "Jamaica", "Mexico", "Panama", "Puerto Rico", "United States"};
+//    Spinner countrySpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +29,8 @@ public class RegisterProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register_profile);
 
         etChooseBirthdate = findViewById(R.id.et_choose_birthdate);
+//        countrySpinner = findViewById(R.id.sp_country);
+        etPostalAddress = findViewById(R.id.et_postal_address);
 
         etChooseBirthdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +48,24 @@ public class RegisterProfileActivity extends AppCompatActivity {
                             }
                         }, year, month, day);
                 picker.show();
+            }
+        });
+
+        final ArrayAdapter<String> spinner_countries = new  ArrayAdapter<String>(RegisterProfileActivity.this,
+                android.R.layout.simple_spinner_dropdown_item, countries);
+
+        etPostalAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(RegisterProfileActivity.this)
+                        .setTitle("Choose a country")
+                        .setAdapter(spinner_countries, new DialogInterface.OnClickListener() {
+
+                            public void onClick(DialogInterface dialog, int which) {
+                                etPostalAddress.setText(countries[which].toString());
+                                dialog.dismiss();
+                            }
+                        }).create().show();
             }
         });
     }

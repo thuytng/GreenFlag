@@ -27,4 +27,5 @@
     <string name="register_tv_mismatched_pw">Your passwords don\'t match</string>
     <string name="register_tv_unavailable_email">An account already exists for this email address</string>
     <string name="register_tv_invalid_pw">One of the passwords you entered wasn\'t valid</string>
+    <string name="register_sp_country_prompt">Choose a country</string>
 </resources>
