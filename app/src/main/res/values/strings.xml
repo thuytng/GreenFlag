@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">GreenFlag</string>
+    <string name="launcher_details_1">GreenFlag customers can create an account to access</string>
+    <string name="launcher_details_2">Car health updates</string>
+    <string name="launcher_details_3">Request a rescue online</string>
+    <string name="launcher_details_4">Policy information</string>
+    <string name="launcher_btn_register">Create an account</string>
+    <string name="launcher_btn_login">Login</string>
+    <string name="register_tv_email">Email address</string>
+    <string name="register_tv_create_pw">Create password</string>
+    <string name="register_tv_repeat_pw">Repeat password</string>
+    <string name="register_tv_pw_req">Your password should have a minimum of 8 characters and contain at least one number, one uppercase, and one lowercase letter. You can use special characters.</string>
+    <string name="register_btn_next">Next</string>
+    <string name="register_et_name">Name</string>
+    <string name="register_et_username">Username</string>
+    <string name="register_et_pw">Password</string>
+    <string name="register_btn_change_avatar">Change avatar</string>
+    <string name="register_et_age">Age</string>
+    <string name="register_birthday">Choose birth date</string>
+    <string name="register_tv_gender">Gender</string>
+    <string name="register_rdbtn_female">Female</string>
+    <string name="register_rdbtn_male">Male</string>
+    <string name="register_rdbtn_na">Not specified</string>
+    <string name="register_et_postal_address">Postal address (opt)</string>
+    <string name="register_btn_save_profile">Save</string>
+    <string name="register_et_create_pw_hint">See criteria below</string>
+    <string name="register_tv_mismatched_pw">Your passwords don\'t match</string>
+    <string name="register_tv_unavailable_email">An account already exists for this email address</string>
+    <string name="register_tv_invalid_pw">One of the passwords you entered wasn\'t valid</string>
+</resources>
